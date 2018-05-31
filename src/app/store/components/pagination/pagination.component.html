@@ -1,0 +1,7 @@
+<ngb-pagination class="d-flex justify-content-center"
+[collectionSize]="totalItems" 
+[pageSize] = "12"
+[(page)]="page" 
+[directionLinks]="true"
+(pageChange)="pageChanged($event)"
+></ngb-pagination>
