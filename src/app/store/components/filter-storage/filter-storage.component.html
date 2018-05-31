@@ -1,0 +1,10 @@
+<div class="content">
+    <div class="d-flex justify-content-between">
+      <small class="text-info">
+        {{ storageTypes[value[0]].label }}
+      </small>
+      <small class="text-danger">
+        {{ storageTypes[value[1]].label }}
+      </small>
+    </div>
+<slider [ngModel]="value" [range]="true" [min]="0" [max]="11" [step]="1" (ngModelChange)="filterByStorage($event)"></slider>

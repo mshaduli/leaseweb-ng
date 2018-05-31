@@ -1,0 +1,35 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <store-filter (onFilterEvent)="onFilter($event)"></store-filter>
+</div>
+<div class="container-fluid">
+  <div *ngIf="totalItems > 0" class="card-deck mb-4 text-center">
+    <div class="card mb-4 box-shadow" *ngFor="let server of servers">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{ server.model }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ server.currency }}{{ server.price }} <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ server.id }}</li>
+          <li>{{ server.ram }} GB {{server.ramType}}</li>
+          <li>{{ server.storageCount }} x {{server.storage}} {{server.storageType}}</li>
+          <li>Location: {{ server.location }}</li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container-fluid">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h2>Oops! These servers are not available now</h2>
+    </div>
+  </div>
+  <div *ngIf="totalItems > 0" class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <ngb-pagination class="d-flex justify-content-center"
+[collectionSize]="totalItems" 
+[pageSize] = "12"
+[(page)]="page" 
+[directionLinks]="true"
+(pageChange)="pageChanged($event)"
+></ngb-pagination>
+  </div>
