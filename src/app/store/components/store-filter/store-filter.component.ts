@@ -25,6 +25,7 @@ export class StoreFilterComponent implements OnInit {
   }
 
   getFilteredServers(filter) {
+    console.log(filter);
     this.clear = false;
     this.filters = { ...this.filters, ...filter };
     this.onFilterEvent.emit(this.filters);

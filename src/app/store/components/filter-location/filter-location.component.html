@@ -1,0 +1,6 @@
+<h6>Locations</h6>
+  <div class="content">
+    <select [ngModel]="selectedLocation" (ngModelChange)="filterByLocation($event)" class="d-block custom-select">
+      <option *ngFor="let location of locations" [value]="location">{{ location }}</option>
+    </select>
+  </div>

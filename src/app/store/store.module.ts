@@ -10,6 +10,9 @@ import { ApiService } from './services/api.service';
 import { SliderModule } from '../slider/slider.module';
 import { FilterStorageComponent } from './components/filter-storage/filter-storage.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { FilterRamComponent } from './components/filter-ram/filter-ram.component';
+import { FilterStorageTypeComponent } from './components/filter-storage-type/filter-storage-type.component';
+import { FilterLocationComponent } from './components/filter-location/filter-location.component';
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     StoreFilterComponent,
     FilterStorageComponent,
     PaginationComponent,
+    FilterRamComponent,
+    FilterStorageTypeComponent,
+    FilterLocationComponent
   ],
   exports: [StoreFrontComponent, StoreFilterComponent],
   providers: [

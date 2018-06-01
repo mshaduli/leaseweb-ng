@@ -16,7 +16,7 @@ export class ApiService {
     return this.http.get(API_URL+'/servers/list', {params: new HttpParams({fromObject:params})});
   }
 
-  public getFilters() {
+  public getFilters(): Observable<any> {
     return this.http.get(API_URL+'/filters');
   }
 

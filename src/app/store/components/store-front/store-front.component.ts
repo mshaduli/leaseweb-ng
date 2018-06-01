@@ -28,7 +28,7 @@ export class StoreFrontComponent implements OnInit {
         this.servers = res.servers;
         this.totalItems = res.totalItems;
       });
-    this.pageChanged({page: this.page});
+    //this.pageChanged({page: this.page});
   }
 
   pageChanged(ev) {

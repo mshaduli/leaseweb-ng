@@ -1,5 +1,4 @@
 import { Component, OnInit, EventEmitter, Output, OnChanges, Input } from '@angular/core';
-import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'filter-by-storage',
@@ -11,7 +10,7 @@ export class FilterStorageComponent implements OnInit, OnChanges {
   @Output() filterEvent = new EventEmitter();
   @Input() clear = false;
   value = [0, 11];
-  constructor(private apiService : ApiService) {}
+  constructor() {}
   storageTypes = [
     { value: 100, label: '100GB' },
     { value: 250, label: '250GB' },

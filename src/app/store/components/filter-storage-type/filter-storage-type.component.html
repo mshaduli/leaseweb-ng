@@ -1,0 +1,6 @@
+<h6>Storage Type</h6>
+  <div class="content">
+    <select [ngModel]="storageType" (ngModelChange)="filterByStorageType($event)" class="d-block custom-select">
+      <option *ngFor="let diskType of diskTypes" [value]="diskType.key">{{ diskType.value }}</option>
+    </select>
+  </div>
