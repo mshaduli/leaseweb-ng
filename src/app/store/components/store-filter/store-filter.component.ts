@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { switchMap, tap } from 'rxjs/operators';
-import { totalmem } from 'os';
 
 @Component({
   selector: 'store-filter',
