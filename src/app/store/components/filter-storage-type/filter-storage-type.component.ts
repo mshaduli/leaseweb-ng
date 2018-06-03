@@ -21,7 +21,7 @@ export class FilterStorageTypeComponent implements OnInit, OnChanges {
 
   filterByStorageType(event) {
     if (event) {
-      this.filterEvent.emit({ storageType: event });
+      this.filterEvent.emit({ storage_type: event });
     }
   }
   ngOnChanges(e) {

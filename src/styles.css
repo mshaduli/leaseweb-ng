@@ -1,1 +1,142 @@
 /* You can add global styles to this file, and also import other style files */
+.main-container {
+    padding-left: 0;
+}
+.main-row {
+    margin-right: 0;
+}
+.main-header {
+    background-color: #131b31;
+    color: #fff;
+}
+
+body{
+    background-color: #edfbfd;
+}
+
+.filters {
+    padding: 20px 0 10px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.filters h3 {
+    background-color: #131b31;
+    padding: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+
+.border-arrow {
+    position: relative;
+}
+
+.border-arrow::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background-color: #03bfda;
+}
+
+.border-arrow::before {
+    position: absolute;
+    content: "";
+    border: 7px solid transparent;
+    left: 50%;
+    bottom: -14px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 4;
+    border-top-color: #03bfda;
+}
+
+.filters-items {
+    border-top: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #03bfda;
+    margin-top: -9px;
+}
+
+.fliter-item {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.filter-storage {
+    margin-top: 50px;
+}
+
+.fliter-item h4 {
+    font-size: 24px;
+    position: relative;
+    font-weight: 800;
+    color: #131b31;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.fliter-storage h4 {
+    margin-top: -90px;
+    margin-bottom: 30px;
+}
+
+.ram-filter {
+    display: inline-flex;
+}
+
+.result-block {
+    padding: 20px 0 10px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.result-block table thead {
+    background-color: #131b31;
+    padding: 12px 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.result-block table tbody {
+    border-top: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #03bfda;
+    margin-top: -9px;
+}
+
+.result-block table tfoot {
+    border-top: none;
+    background-color: #fff;
+    border: 1px solid #03bfda;
+    margin-top: -9px;
+}
+
+.filter-clear {
+    color: #ffffff;
+    position: fixed;
+    top: 115px;
+    left: 330px;
+    background: none;
+    font-size: 12px;
+    cursor: pointer;
+}

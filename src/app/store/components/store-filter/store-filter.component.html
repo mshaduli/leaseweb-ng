@@ -1,5 +1,47 @@
+<div class="col-12">
+        <div class="filters">
+            <h3 class="border-arrow text-left pl-3">Filter</h3>
+            <span class="filter-clear" (click)="clearFilters();">CLEAR</span>
+            <div class="filters-items">
+                <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"> 
+                        <div class="row">
+                                <div class="col-md-12 col-lg-12 fliter-item filter-storage">
+                                    <div class="filter-title fliter-storage">
+                                        <h4>BY STORAGE SIZE</h4>
+                                    </div>
+                                    <div class="filter-block">
+                                        <filter-by-storage (filterEvent)="getFilteredServers($event)" [clear]="clear"></filter-by-storage>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12 fliter-item">
+                                        <div class="filter-title">
+                                            <h4>BY RAM</h4>
+                                        </div>
+                                        <div class="filter-block">
+                                            <filter-by-ram (filterEvent)="getFilteredServers($event)" [clear]="clear"></filter-by-ram>
+                                        </div>
+                                        
+                                </div>
+                                <div class="col-md-12 col-lg-12 fliter-item">
+                                    <div class="filter-title">
+                                        <h4>BY STORAGE TYPE</h4>
+                                    </div>
+                                    <div class="filter-block">
+                                        <filter-by-storage-type (filterEvent)="getFilteredServers($event)" [clear]="clear"></filter-by-storage-type>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12 fliter-item">
+                                    <div class="filter-title">
+                                        <h4>BY LOCATION</h4>
+                                    </div>
+                                    <div class="filter-block">
+                                        <filter-by-location (filterEvent)="getFilteredServers($event)" [clear]="clear"></filter-by-location>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+</div>
 
-<filter-by-storage (filterEvent)="getFilteredServers($event)" [clear]="clear"></filter-by-storage>
-<filter-by-ram (filterEvent)="getFilteredServers($event)" [clear]="clear"></filter-by-ram>
-<filter-by-storage-type (filterEvent)="getFilteredServers($event)" [clear]="clear"></filter-by-storage-type>
-<filter-by-location (filterEvent)="getFilteredServers($event)" [clear]="clear"></filter-by-location>
+

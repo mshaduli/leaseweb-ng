@@ -32,6 +32,10 @@ export class SliderComponent implements ControlValueAccessor, OnChanges {
 
   @Input() step = 1;
 
+  @Input() selectedMin;
+
+  @Input() selectedMax;
+
   /**
    * Range section mode.
    * Model: [number, number]
