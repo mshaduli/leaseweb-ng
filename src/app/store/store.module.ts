@@ -13,6 +13,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { FilterRamComponent } from './components/filter-ram/filter-ram.component';
 import { FilterStorageTypeComponent } from './components/filter-storage-type/filter-storage-type.component';
 import { FilterLocationComponent } from './components/filter-location/filter-location.component';
+import { ShowUnitPipe } from './pipes/show-unit.pipe';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { FilterLocationComponent } from './components/filter-location/filter-loc
     PaginationComponent,
     FilterRamComponent,
     FilterStorageTypeComponent,
-    FilterLocationComponent
+    FilterLocationComponent,
+    ShowUnitPipe
   ],
   exports: [StoreFrontComponent, StoreFilterComponent],
   providers: [

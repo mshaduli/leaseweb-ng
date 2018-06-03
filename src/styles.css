@@ -140,3 +140,13 @@ body{
     font-size: 12px;
     cursor: pointer;
 }
+.page-link {
+    color: #131b31;    
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #131b31;   
+    border-color: #131b31;   
+}

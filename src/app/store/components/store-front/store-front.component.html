@@ -13,22 +13,31 @@
             <th scope="col">PRICE</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody *ngIf="totalItems > 0">
           <tr *ngFor="let server of servers">
             <th scope="row">{{ server.model }}</th>
             <td>{{ server.ram }} GB {{server.ramType}}</td>
-            <td>{{ server.storageCount }} x {{server.storage}} {{server.storageType}}</td>
+            <td>{{ server.storageCount }} x {{server.storage | showUnit }} {{server.storageType}}</td>
             <td>{{ server.location }}</td>
             <td>{{ server.currency }}{{ server.price }} <small class="text-muted">/ mo</small></td>
           </tr>
         </tbody>
-        <tfoot>
+        <tbody *ngIf="totalItems == 0">
+            <tr>
+                <th scope="row" colspan="5" class="text-center"><h2>Oops! These servers are not available now</h2></th>
+            </tr>
+        </tbody>
+        <tfoot *ngIf="totalItems > 0">
           <tr>
-            <th colspan="5">
-                <div *ngIf="totalItems > 0" class="text-center">
-                  <ngb-pagination class="d-flex justify-content-center"
+            <th colspan="2">
+              Showing {{ itemStart }} to {{ itemEnd }} of {{ totalItems }}
+            </th>
+            <th colspan="3">
+                <div *ngIf="(totalItems/itemsPerPage) > 1">
+                  <ngb-pagination class="d-flex float-right"
                   [collectionSize]="totalItems" 
-                  [pageSize] = "12"
+                  [pageSize] = "itemsPerPage"
+                  [maxSize] = "10"
                   [(page)]="page" 
                   [directionLinks]="true"
                   (pageChange)="pageChanged($event)"

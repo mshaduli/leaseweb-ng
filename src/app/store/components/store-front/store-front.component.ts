@@ -15,6 +15,9 @@ export class StoreFrontComponent implements OnInit {
   totalItems;
   page = 1;
   filters = {};
+  itemsPerPage = 10;
+  itemStart = 1;
+  itemEnd = 10;
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
@@ -35,6 +38,14 @@ export class StoreFrontComponent implements OnInit {
       const filter = {page: this.page}
       this.filters = { ...this.filters, ...filter };
       this.apiService.serversSubject.next(this.filters);
+      this.itemStart = (this.itemsPerPage*this.page) - 9;
+      if((this.totalItems-this.itemStart) < this.itemsPerPage) {
+        this.itemEnd = this.itemStart+this.totalItems-this.itemStart;
+      }
+      else {
+        this.itemEnd = this.itemStart+9;
+      }
+      
   }
 
   onFilter(filter) {
