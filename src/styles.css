@@ -96,6 +96,7 @@ body{
 
 .ram-filter {
     display: inline-flex;
+    margin-right: 5px;
 }
 
 .result-block {
@@ -150,3 +151,4 @@ body{
     background-color: #131b31;   
     border-color: #131b31;   
 }
+

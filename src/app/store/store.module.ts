@@ -14,6 +14,7 @@ import { FilterRamComponent } from './components/filter-ram/filter-ram.component
 import { FilterStorageTypeComponent } from './components/filter-storage-type/filter-storage-type.component';
 import { FilterLocationComponent } from './components/filter-location/filter-location.component';
 import { ShowUnitPipe } from './pipes/show-unit.pipe';
+import { UiCheckboxModule } from '../ui-checkbox/ui-checkbox.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ShowUnitPipe } from './pipes/show-unit.pipe';
     HttpClientModule,
     FormsModule,
     NgbModule.forRoot(),
-    SliderModule
+    SliderModule,
+    UiCheckboxModule
   ],
   declarations: [
     StoreFrontComponent,

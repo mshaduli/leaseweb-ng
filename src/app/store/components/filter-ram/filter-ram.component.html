@@ -1,6 +1,6 @@
 <div class="content">
-    <div *ngFor="let ram of ramTypes;  index as i" class="mb1 ml1 ram-filter">
-        <input type="checkbox" id="ram-{{i}}" [(ngModel)]="ramTypes[i]['value']" (change)="filterByRam();" />
-        <label for="ram-{{i}}" class="pl-2"> {{ ram.label }}</label>
+    <div *ngFor="let ram of ramTypes;  index as i" class="mb1 ram-filter">
+        <input type="checkbox" id="ram-{{i}}" uiCheckbox [(ngModel)]="ramTypes[i]['value']" (change)="filterByRam();" />
+        <label for="ram-{{i}}"> {{ ram.label }}</label>
     </div>
 </div>

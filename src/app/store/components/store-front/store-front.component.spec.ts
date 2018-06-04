@@ -4,6 +4,7 @@ import { StoreFrontComponent } from './store-front.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ShowUnitPipe } from '../../pipes/show-unit.pipe';
 
 describe('StoreFrontComponent', () => {
   let component: StoreFrontComponent;
@@ -11,7 +12,7 @@ describe('StoreFrontComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StoreFrontComponent ],
+      declarations: [ StoreFrontComponent, ShowUnitPipe ],
       imports: [HttpClientTestingModule],
       schemas: [NO_ERRORS_SCHEMA],
       providers: [ApiService]
