@@ -2,8 +2,13 @@
 
 This project was created as demo excercise for leaseweb only. 
 
+# Install Dependencies
+
+Run `npm install` for installing deps
+
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4444/`. The app will automatically reload if you change any of the source files.
 
 
