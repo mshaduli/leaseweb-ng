@@ -151,12 +151,12 @@ body{
 
 .filter-clear {
     color: #ffffff;
-    position: fixed;
-    top: 115px;
-    left: 330px;
+    margin-top: 3px;
     background: none;
     font-size: 12px;
     cursor: pointer;
+    float: right;
+    margin-right: 10px;
 }
 .page-link {
     color: #131b31;    

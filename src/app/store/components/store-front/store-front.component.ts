@@ -42,7 +42,7 @@ export class StoreFrontComponent implements OnInit {
   sort(field, type) {
     this.sortBy = {
       field: field,
-      type: this.sortBy.type ==='asc' ? 'desc' : 'asc'
+      type: (this.sortBy.type ==='asc' && this.sortBy.field === field) ? 'desc' : 'asc'
     }
     this.sortClass = 'sort_'+this.sortBy.type;
     this.page = 1;
