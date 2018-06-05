@@ -6,11 +6,11 @@
     <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">MODEL</th>
-            <th scope="col">RAM</th>
-            <th scope="col">HDD</th>
-            <th scope="col">LOCATION</th>
-            <th scope="col">PRICE</th>
+            <th scope="col" (click)="sort('model')"><span class="{{ sortBy.field === 'model'? sortClass: '' }}">MODEL </span></th>
+            <th scope="col" (click)="sort('ram')"><span class="{{ sortBy.field === 'ram'? sortClass: '' }}">RAM</span></th>
+            <th scope="col" (click)="sort('storage')"> <span class="{{ sortBy.field === 'storage'? sortClass: '' }}">HDD</span></th>
+            <th scope="col" (click)="sort('location')"><span class="{{ sortBy.field === 'location' ? sortClass : '' }}">LOCATION </span></th>
+            <th scope="col" (click)="sort('price')"><span class="{{ sortBy.field === 'price' ? sortClass : '' }}">PRICE</span></th>
           </tr>
         </thead>
         <tbody *ngIf="totalItems > 0">

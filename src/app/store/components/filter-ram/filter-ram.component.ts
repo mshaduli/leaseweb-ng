@@ -10,6 +10,9 @@ export class FilterRamComponent implements OnInit, OnChanges {
   
   @Output() filterEvent = new EventEmitter();
   @Input() clear = false;
+  sorts = {
+    'price' : true
+  };
 
   constructor() { }
 
@@ -23,7 +26,8 @@ export class FilterRamComponent implements OnInit, OnChanges {
     { key: '32', label: '32GB', value: false },
     { key: '48', label: '48GB', value: false },
     { key: '64', label: '64GB', value: false },
-    { key: '96', label: '96GB', value: false }
+    { key: '96', label: '96GB', value: false },
+    { key: '128', label: '128GB', value: false }
   ];
 
   ngOnInit() {

@@ -18,6 +18,11 @@ export class StoreFrontComponent implements OnInit {
   itemsPerPage = 10;
   itemStart = 1;
   itemEnd = 10;
+  sortBy = {
+    field: 'price',
+    type: 'asc'
+  }
+  sortClass = 'sort_'+this.sortBy.type;
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
@@ -34,8 +39,27 @@ export class StoreFrontComponent implements OnInit {
     //this.pageChanged({page: this.page});
   }
 
+  sort(field, type) {
+    this.sortBy = {
+      field: field,
+      type: this.sortBy.type ==='asc' ? 'desc' : 'asc'
+    }
+    this.sortClass = 'sort_'+this.sortBy.type;
+    this.page = 1;
+    this.pageChanged(
+      {
+        page: this.page,
+        sort_by: this.sortBy
+      }
+    );
+  }
+
   pageChanged(ev) {
-      const filter = {page: this.page}
+      const filter = {
+                        page: this.page, 
+                        sort_by: this.sortBy.field, 
+                        sort_type: this.sortBy.type
+                      };
       this.filters = { ...this.filters, ...filter };
       this.apiService.serversSubject.next(this.filters);
       this.itemStart = (this.itemsPerPage*this.page) - 9;

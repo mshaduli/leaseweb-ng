@@ -117,6 +117,23 @@ body{
     color: #fff;
 }
 
+.result-block table th {
+    cursor: pointer;
+}
+
+.result-block table th span {
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-right: 20px;
+}
+
+.sort_desc {
+    background-image: url(assets/sort_desc.png);
+}
+.sort_asc {
+    background-image: url(assets/sort_asc.png);
+}
+
 .result-block table tbody {
     border-top: none;
     padding: 20px;
@@ -151,4 +168,6 @@ body{
     background-color: #131b31;   
     border-color: #131b31;   
 }
+
+
 
